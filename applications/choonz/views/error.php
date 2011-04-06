@@ -1,0 +1,1 @@
+<p style="color:red;"><?php echo get_class($e) . ': ' .$this->escape($e->getMessage());?></p>

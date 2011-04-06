@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-size:0.8em;
+     font-family:sans-serif;
+     color:#3c3c3c;
+ }
+ ul{
+     border:1px solid #cecece;
+     max-height:200px;
+     overflow:auto;
+     padding:2px;
+ }
+ li{
+     list-style-type:none;
+     list-style-position:inside;
+     margin-bottom:1em;
+     font-size:0.8em;
+ }
+ li.currentsong{
+     background-color:#E8E7E6;
+     color:#000;
+ }
+ fieldset{
+     border:none;
+     border-top:1px solid #cecece;
+     padding:5px;
+ }
+ legend{
+ }
+ span.album{
+     color:#7992B1;
+ }
+ a img{
+     border:none;
+     vertical-align:middle;
+ }
+ p{
+     margin:0;
+ }
+ p img{
+     vertical-align:middle;
+ }
+ legend img{
+     vertical-align:middle;
+ }
+ span.time{
+     font-family:monospace;
+ }
