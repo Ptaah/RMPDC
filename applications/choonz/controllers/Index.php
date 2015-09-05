@@ -63,6 +63,17 @@ class Index extends \Controller
         header('Location: ' . \Shozu::getInstance()->base_url);
         die;
     }
+
+    public function playAction()
+    {
+        $mpd = \Net_MPD::factory('Playback', \choonz\MPD_HOST, \choonz\MPD_PORT);
+        $song = trim($this->getParam('songid', ''));
+	if (!empty($song)){
+	        $mpd->play($song);
+	}
+        header('Location: ' . \Shozu::getInstance()->base_url);
+        die;
+    }
     
     public function clearplaylistAction()
     {

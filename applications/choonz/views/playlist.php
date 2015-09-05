@@ -9,7 +9,11 @@
         <ul style="max-height:200px;overflow:auto;">
         <?php foreach($playlist as $song){?>
             <li<?php if(isset($status['songid']) && $song['Id'] == $status['songid']){echo ' class="currentsong"';}?>>
-                <?php if(isset($status['songid']) && $song['Id'] == $status['songid']){echo '<a name="song' . $song['Id'] . '"></a>';}?>
+                <?php if(isset($status['songid']) && $song['Id'] == $status['songid']){
+			echo '<a name="song' . $song['Id'] . '">' . $song['Id'] . '</a>';
+		} else {
+			echo '<a name="song' . $song['Id'] . '" href="' . $s->url('choonz/index/play&songid=' . $song['Id']) . '">' . $song['Id'] . '</a>';
+		}?>
                 <strong><?php echo isset($song['Artist']) ? $this->escape($song['Artist']) : 'unknown artist';?></strong>
                 <br/><em><?php echo isset($song['Title']) ? $this->escape($song['Title']) : 'unknown title';?></em>
                 <?php echo isset($song['Album']) ? '<br/><span class="album">[' . $this->escape($song['Album']) . ']</span>' : '';?></li>
